@@ -1,0 +1,5 @@
+name: 'HCFPlugin'
+author: 'xChillz'
+version: 'dev'
+main: 'hcf\xchillz\HCFPlugin'
+api: 2.0.0
