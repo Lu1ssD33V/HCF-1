@@ -10,10 +10,10 @@ use hcf\xchillz\HCFPlugin;
 
 final class DataSourceFactory {
 
-    const IN_MEMORY_DATASOURCE = 'in-memory';
+    const DEFAULT_DATASOURCE = IDataSource::IN_MEMORY_ID;
 
     public static function create(): IDataSource {
-        $default = self::IN_MEMORY_DATASOURCE;
+        $default = self::DEFAULT_DATASOURCE;
 
         $dataSourceId = ConfigData::getInstance()->getString('datasource-id', false, $default);
 
@@ -27,9 +27,13 @@ final class DataSourceFactory {
         return $dataSource;
     }
 
+    /**
+     * @param string $dataSourceId
+     * @return IDataSource|null
+     */
     private static function fromId(string $dataSourceId) {
         switch ($dataSourceId) {
-            case self::IN_MEMORY_DATASOURCE:
+            case IDataSource::IN_MEMORY_ID:
                 return new InMemoryDataSource();
             default:
                 return null;

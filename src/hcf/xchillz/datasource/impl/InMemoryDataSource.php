@@ -16,8 +16,7 @@ final class InMemoryDataSource implements IDataSource {
         $this->data[$table][$key] = $value;
     }
 
-    public function update($table, $id, $key, $value): bool
-    {
+    public function update($table, $id, $key, $value): bool {
         if (!isset($this->data[$table][$id])) return false;
 
         $this->data[$table][$id][$key] = $value;
@@ -25,19 +24,20 @@ final class InMemoryDataSource implements IDataSource {
         return true;
     }
 
-    public function find($table, $key)
-    {
+    public function find($table, $key) {
         return $this->data[$table][$key] ?? null;
     }
 
-    public function findAll($table)
-    {
+    public function findAll($table) {
         return $this->data[$table];
     }
 
-    public function delete($table, $key)
-    {
+    public function delete($table, $key) {
         unset($this->data[$table][$key]);
+    }
+
+    public function getId(): string {
+        return IDataSource::IN_MEMORY_ID;
     }
 
 }
