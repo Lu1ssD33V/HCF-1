@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace hcf\xchillz\profile\repository\impl;
+namespace hcf\xchillz\object\profile\repository\impl;
 
 use hcf\xchillz\cache\TemporalCache;
 use hcf\xchillz\datasource\impl\InMemoryDataSource;
-use hcf\xchillz\profile\Profile;
-use hcf\xchillz\profile\repository\ProfileRepository;
+use hcf\xchillz\object\profile\Profile;
+use hcf\xchillz\object\profile\repository\ProfileRepository;
 
 final class InMemoryProfileRepository implements ProfileRepository {
 

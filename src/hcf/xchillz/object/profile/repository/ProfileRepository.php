@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace hcf\xchillz\profile\repository;
+namespace hcf\xchillz\object\profile\repository;
 
-use hcf\xchillz\profile\Profile;
+use hcf\xchillz\object\profile\Profile;
 
 interface ProfileRepository {
 

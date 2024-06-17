@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace hcf\xchillz\profile\service;
+namespace hcf\xchillz\object\profile\service;
 
 use hcf\xchillz\common\SingletonTrait;
-use hcf\xchillz\profile\Profile;
-use hcf\xchillz\profile\repository\ProfileRepository;
-use hcf\xchillz\profile\repository\ProfileRepositoryFactory;
+use hcf\xchillz\object\profile\Profile;
+use hcf\xchillz\object\profile\repository\ProfileRepository;
+use hcf\xchillz\object\profile\repository\ProfileRepositoryFactory;
 use pocketmine\Player;
 
 final class ProfileService {

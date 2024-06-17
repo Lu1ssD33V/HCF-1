@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace hcf\xchillz\profile;
+namespace hcf\xchillz\object\profile;
 
 final class Profile {
 

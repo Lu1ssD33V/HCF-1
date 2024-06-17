@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace hcf\xchillz\profile\repository;
+namespace hcf\xchillz\object\profile\repository;
 
 use hcf\xchillz\datasource\IDataSource;
 use hcf\xchillz\HCFPlugin;
-use hcf\xchillz\profile\repository\impl\InMemoryProfileRepository;
+use hcf\xchillz\object\profile\repository\impl\InMemoryProfileRepository;
 
 final class ProfileRepositoryFactory {
 
