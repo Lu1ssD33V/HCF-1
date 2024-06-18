@@ -34,7 +34,7 @@ final class Color {
             '{RESET}' => TextFormat::RESET
         ];
 
-        return str_ireplace(array_keys($colors), array_values($colors), $string);
+        return str_replace(array_keys($colors), array_values($colors), $string);
     }
 
 }
